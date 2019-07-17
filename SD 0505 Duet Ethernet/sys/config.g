@@ -1,9 +1,14 @@
-; BOSSdelta 0505 machine configuration file by SeeMeCNC
+; BOSSdelta 0505 machine Ethernet Configuration
+; by SeeMeCNC
 
-M550 PBOSS                                 ; Printer name
+M550 PBOSSethernet                         ; Printer name
 M555 P2                                    ; Gcode Output Type
-;M552 S1                                    ; Enable Wifi not available on ethernet model
+M540 P0x1F:0x2E:0x3D:0xC7:0x19:0x17		   ; Set MAC Address 
+M552 P0.0.0.0 S1 						   ; IP address S1 enable networking P0 use DHCP
+M554 P192.168.1.1	 					   ; Gateway
+M553 P255.255.255.0 					   ; Netmask
 M575 P1 B57600 S1                          ; PanelDue Comm Setup
+
 G21                                        ; Work in millimeters
 G90                                        ; Send absolute coordinates
 
