@@ -12,7 +12,6 @@ M552 P0.0.0.0				; IP address P0.0.0.0 uses DHCP
 G4 P1000				; pause a second
 M552 S1					; enable network
 G4 P1000				; pause a second
-;M555 P2				; set output to look like marlin
 M575 P1 B57600 S1			; PanelDue Comm Setup
 
 G21					; Work in millimeters
