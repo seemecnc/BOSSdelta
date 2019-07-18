@@ -2,7 +2,7 @@
 ; by SeeMeCNC
 
 M111 S0					; debug off
-M550 PBOSS0505			; Printer name (can be anything you want)
+M550 PBOSS0505				; Printer name (can be anything you want)
 M929 P"eventlog.txt" S1			; event logging start
 
 ; Networking & Commnications
@@ -26,7 +26,7 @@ M569 P4 S1				; Drive 4 goes forwards (E1)
 
 M574 X2 Y2 Z2 S1			; set end stop configuration (all end stops at high end, active high)
 
-M665 R260 L572.95 B252 H600 X0 Y0 Z0	; delta radius, diagonal rod length, printable radius and homed height
+M665 R260 L572.92 B252 H600 X0 Y0 Z0	; delta radius, diagonal rod length, printable radius and homed height
 					; Y X Z are tower angle offsets
 M666 X0 Y0 Z0				; end stop offsets in mm
 
