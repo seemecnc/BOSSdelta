@@ -1,2 +1,2 @@
 # BOSSdelta
-Half Meter Delta by SeeMeCNC
+Half Meter Delat by SeeMeCNC
