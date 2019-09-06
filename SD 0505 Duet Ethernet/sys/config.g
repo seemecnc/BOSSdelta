@@ -3,7 +3,7 @@
 
 M111 S0					; debug off
 M550 PBOSS0505				; Printer name (can be anything you want)
-M929 P"eventlog.txt" S1			; event logging start
+;M929 P"eventlog.txt" S1			; event logging start
 
 ; Networking & Commnications
 M540 P0xF0:0xE1:0xD2:0xC3:0x11:0x11	; Set your own MAC Address (make different for each SeeMeCNC printer you own)
@@ -43,7 +43,7 @@ M106 P0 H-1				; Part Cooling Fan
 M106 P2 T50 S0.7 H1			; Heat sink fan
 M307 H0 B0				; Heated Bed (H2)
 M305 P0 T100000 B4388 R4700 H30 L0	; Bed thermistor
-M305 P1 T100000 B4388 R4700 H30 L0	; Hot end Thermistor
+M305 P1 T100000 B4388 R4700 C7.06e-8 H30 L0	; Hot end Thermistor
 M563 P0 D0 H1				; Hot end (T0), drive (E0), heater (H1)
 G10 P0 S0 R0				; Hot end operating and standby temperatures
 
@@ -58,7 +58,7 @@ M557 R245 S30				; define probing area
 
 ;Load stored values and heightmap
 M501					; Load config-override values
-T0					; Select Tool 0 Default
+T0					    ; Select Tool 0 Default
 M500					; Save settings
 M375					; Load height map
 
