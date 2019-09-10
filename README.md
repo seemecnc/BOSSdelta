@@ -1,2 +1,4 @@
-# BOSSdelta
-Half Meter Delta by SeeMeCNC
+BOSSdelta (TM) of SeeMeCNC(R)
+
+
+
