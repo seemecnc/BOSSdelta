@@ -31,16 +31,16 @@ M666 X0 Y0 Z0				; end stop offsets in mm
 
 M350 X16 Y16 Z16 E16:16 I1		; Set 16x micro-stepping w/ Interpolation
 M92 X200 Y200 Z200			; Set axis steps/mm
-M92 E182.0:182.0			; Set extruder steps/mm
+M92 E182.0:182.0                        ; Set extruder steps/mm
 
-M906 X1700 Y1700 Z1700 E1300:1300 I50	; Set motor currents (mA) and idle current %
-M201 X2400 Y2400 Z2400 E5000		; Accelerations (mm/s^2)
-M203 X12000 Y12000 Z12000 E14000	; Maximum speeds (mm/min)
-M566 X500 Y500 Z500 E2000		; Maximum instant speed changes mm/minute
+M906 X1700 Y1700 Z1700 E1300:1300 I50   ; Set motor currents (mA) and idle current %
+M201 X500 Y500 Z2000 E5000              ; Accelerations (mm/s^2)
+M203 X10000 Y10000 Z10000 E14000        ; Maximum speeds (mm/min)
+M566 X200 Y200 Z300 E2000               ; Maximum instant speed changes mm/minute
 
 ;Bed & Hotend Setup
-M106 P0 H-1				; Part Cooling Fan
-M106 P2 T50 S0.7 H1			; Heat sink fan
+M106 P0 H-1                             ; Part Cooling Fan
+M106 P2 T50 S0.7 H1                     ; Heat sink fan
 M307 H0 B0				; Heated Bed (H2)
 M305 P0 T100000 B4388 R4700 H30 L0	; Bed thermistor
 M305 P1 T100000 B4388 R4700 C7.06e-8 H30 L0	; Hot end Thermistor
