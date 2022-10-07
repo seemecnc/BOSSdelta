@@ -1,0 +1,10 @@
+M291 P"EXTR 2 Load filament through EZR, then click OK" R"Load Filament" S3
+G28                 ; home
+M83                 ; relative (incremental) positioning mode
+T1                  ; select tool 2
+M302 P1             ; Allow cold extrusion
+G1 E1450 F8000      ; Feed length for 1M BOSSdelta or 1400mm long Bowden
+M302 P0             ; Do not allow cold extrusion
+T0                  ; reselect tool 1
+M84 E4:5            ; turn off extruder motors
+M82                 ; absolute positioning mode
